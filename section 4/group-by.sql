@@ -66,3 +66,4 @@ select payment_date , sum(amount) sum from payment group by payment_date order b
 select * from payment order by payment_id;
 
 select date(payment_date) paid_date, staff_id, sum(amount) sum from payment group by paid_date, staff_id order by sum desc; -- este comando agrupa la suma de pagos que se hicieron en una fecha determinada y por cada fecha agrupa por cada staff_id, es decir que devulve la suma de pagos que cada staff_id (que son 1 y 2) hizo en una fecha determinada, este divide el amount para el staff_id 1 y 2 a difeencia del que no tiene la columna staff_id que solo devulve la suma de pagos que se hicieron en una fecha determinada sin importar que staff_id hizo ese pago
+
