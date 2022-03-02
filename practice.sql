@@ -137,3 +137,10 @@ select * from customer natural join payment;
 select * from inventory;
 select * from rental; 
 select 
+
+select * from customer full join payment using(customer_id);
+select firsT_name from customer where last_name is null;
+select firsT_name from customer where last_name is not null;
+select firsT_name, last_name, payment_id from customer left join payment using(customer_id) order by last_name nulls first;
+select t1.title, t2.title, t1.length from film t1 inner join film t2 on t1.title != t2.title and t1.length = t2.length;
+select a.firsT_name, b.firsT_name from customer a inner join customer b on a.customer_id <> b.customer_id and a.last_name = b.last_name;
