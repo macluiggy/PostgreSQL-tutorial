@@ -155,3 +155,5 @@ select firsT_name from customer order by firsT_name;
 select firsT_name, last_name from customer cross join paymenT;
 select * from customer natural join  paymenT;
 select * from  paymenT natural join customer;
+
+select firsT_name, last_name from customer fetch first 5 rows only;
