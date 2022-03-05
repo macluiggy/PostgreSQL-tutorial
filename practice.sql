@@ -157,3 +157,7 @@ select * from customer natural join  paymenT;
 select * from  paymenT natural join customer;
 
 select firsT_name, last_name from customer fetch first 5 rows only;
+
+
+alter user with superuser;
+alter role user with superuser;
