@@ -161,3 +161,6 @@ select firsT_name, last_name from customer fetch first 5 rows only;
 
 alter user with superuser;
 alter role user with superuser;
+
+
+select firsT_name || ' ' || last_name from customer where first_name like 'Ann%';

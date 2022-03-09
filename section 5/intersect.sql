@@ -1,0 +1,2 @@
+-- intersect es basicamente igual a la clausula union, pero en vez de eliminar duplicados, los intersecta, es decir que esta clausula devuelve las filas que estan en ambas tablas.
+select * from top_rated_films intersect select * from most_popular_films;
