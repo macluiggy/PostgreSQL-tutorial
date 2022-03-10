@@ -164,3 +164,7 @@ alter role user with superuser;
 
 
 select firsT_name || ' ' || last_name from customer where first_name like 'Ann%';
+
+
+select firsT_name, last_name from customer inner join payment using(customer_id) ;
+select * from top_rated_films cross join most_popular_films;-- X
