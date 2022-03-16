@@ -173,3 +173,6 @@ select * from top_rated_films cross join most_popular_films;-- X
 insert into database_name (column_name) values ('value');
 sudo -U Postgres pg_restore -d database_name path/to/database_data.tar
 select t1.title, t2.title from film t1 inner join film t2 on t1.title != t2.title and t1.length = t2.length;
+
+
+select t1.title, t2.title from film t1 inner join film t2 on t1.title != t2.title and t1.length = t2.length limit 5;
