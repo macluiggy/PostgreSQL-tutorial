@@ -67,3 +67,5 @@ EXISTS (
     payment.customer_id = customer.customer_id
 );
 -- esto funciona como un inner join entre las tablas customer y payment, pero solo se devulve como 1 fila por cada fila de customer, aunque hay filas correspondientes en payment
+
+select * from users where id in (select id from users);
