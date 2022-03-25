@@ -1,0 +1,2 @@
+-- el operador EXISTS se utiliza para saber si existe uno o mas filas en una consulta
+-- el contenido de la subconsulta no es importante
