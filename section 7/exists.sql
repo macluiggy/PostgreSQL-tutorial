@@ -37,6 +37,12 @@ where not exists (
 )
 order by first_name, last_name;
 -- esta cosulta devulve los resultados que no sean iguales a la constulta anterior
+-- esta consulta tambien se podria escribir como:
+select first_name, last_name
+from customer c
+inner join payment p on p.customer_id = c.customer_id
+where amount > 11
+order by first_name, last_name;
 
 -- si la subquery retorna null, exists devuelve true
 SELECT
