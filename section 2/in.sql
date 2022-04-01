@@ -24,3 +24,9 @@ ORDER BY customer_id;
 
 select customer_id, first_name, last_name from customer where customer_id in(select customer_id from rental where cast (return_date as date) = '2005-05-27') order by customer_id;
 -- select first_name from customer where first_name in (select first_name from customer where length(first_name) between 4 and 6);
+
+
+
+
+select first_name, last_name from customer where first_name in (select first_name from customer where length(first_name) > 5);
+select first_name, last_name from customer where length(first_name) > 5;

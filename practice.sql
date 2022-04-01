@@ -183,3 +183,7 @@ select c1, c2 from t where c1 in (select c1 from t where c1 between 4 and 40);
 select c1, c2 from t where x2 >= any(select max(x1) from t group by c1)
 -- supongamos que queremos los valores maximos de x1 y x2 donde ambos son iguales, este query nos devolveria los valores de x1 y x2 que son iguales y al mismo tiempo maximos.
 select c1, x1, x2 from t where x2 = any(select max(x1) from t group by c1);
+
+
+select firsT_name, last_name from customer inner join payment using(customer_id);
+select firsT_name, last_name from customer natural join payment;

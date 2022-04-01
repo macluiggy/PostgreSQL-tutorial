@@ -56,3 +56,4 @@ ORDER BY
 	first_name,
 	last_name;
 -- esta consulta devolvera todas las filas de la tabla customer ya que exists devuelve true para cada fila
+
