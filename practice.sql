@@ -187,3 +187,6 @@ select c1, x1, x2 from t where x2 = any(select max(x1) from t group by c1);
 
 select firsT_name, last_name from customer inner join payment using(customer_id);
 select firsT_name, last_name from customer natural join payment;
+
+
+select firsT_name, last_name from customer where firsT_name = last_name;
