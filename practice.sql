@@ -190,3 +190,9 @@ select firsT_name, last_name from customer natural join payment;
 
 
 select firsT_name, last_name from customer where firsT_name = last_name;
+
+
+update comerciantes c
+set c.altura = 'alto'
+from persona p
+where c.id = p.id;
