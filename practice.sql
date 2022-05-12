@@ -196,3 +196,17 @@ update comerciantes c
 set c.altura = 'alto'
 from persona p
 where c.id = p.id;
+
+update table1 set col1 = val1 from table2 where table1.col1 = table2.col1;
+with t as (select * from table1) update t set col1 = val1 from table2 where table1.col1 = table2.col1;
+update t1 set c1 = v1 where id = 2 on conflict (id) do nothing;
+update t1 set c1 = v1 where id = 2
+on conflict (id) do update set c1 = excluded.c1 || ' ' || t1.c1;
+insert into table1 (col1, col2) values (v1, v2)
+on conflict (id) do nothing;
+insert into table1 (col1, col2) values (v1, v2)
+on conflict (id) do update set col1 = excluded.col1 || ' ' || table1.col1;
+insert into table1 (col1, col2) values (v1, v2)
+on conflict table_column_key do nothing;
+insert into table1 (col1, col2) values (v1, v2)
+on conflict table_column_key do update set col1 = excluded.col1 || ' ' || table1.col1;
