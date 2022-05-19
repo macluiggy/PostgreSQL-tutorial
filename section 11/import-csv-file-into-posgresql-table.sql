@@ -26,3 +26,4 @@ INSERT INTO persons (first_name, last_name, dob, email)
 VALUES
  ('John', 'Doe', '1995-01-05', 'john.doe@postgresqltutorial.com'),
  ('Jane', 'Doe', '1990-02-05', 'jane.doe@postgresqltutorial.com');
+  
