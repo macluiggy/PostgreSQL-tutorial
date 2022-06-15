@@ -51,7 +51,7 @@ select * from payment where customer_id = 341 order by staff_id;
 select 
 select * from payment where staff_id = 1 or staff_id = 2 order by staff_id;
 
-select customer_id, staff_id, sum(amount) from payment group by customer_id, staff_id order by customer_id desc; -- la cantidad de filas que devulve este comando es igual a la multiplicacion de customer_id agrupado por la cantidad de staff_id agrupado
+select customer_id, staff_id, sum(amount) from payment where payment_id > 1 group by customer_id, staff_id order by customer_id desc; -- la cantidad de filas que devulve este comando es igual a la multiplicacion de customer_id agrupado por la cantidad de staff_id agrupado
 -- lo que hace el comando anterior es que devulve las filas donde haya uno o mas filas donde customer_id sea igual a "x" y donde staff_id sea igual a "y", o dicho de otra manera, agrupa las columnas donde se repitan el valor de customer_id y el valor de staff_id pero juntos, osea que customer_id y staff_id se toman como un solo valor y de ahi se agrupan para sumar los valores de amount donde salga ese valor de customer_id y staff_id
 select customer_id,  sum(amount) from payment group by customer_id;
 

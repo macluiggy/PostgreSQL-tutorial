@@ -38,3 +38,4 @@ DELIMITER ',' CSV HEADER;
 \ COPY persons(email) TO 
 '/home/luiggy/PROGRAMMING/POSTGRESQL/PostgreSQL tutorial/section 11/persons_email_db.csv' 
 DELIMITER ',';
+
